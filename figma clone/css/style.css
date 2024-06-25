@@ -10,13 +10,7 @@ font-family: ClashDisplay-Semibold;
 font-family: ClashDisplay-Bold;
 font-family: ClashDisplay-Variable;
 
-```
-## 6. (Optional)
-Use `font-variation-settings` rule to controll axes of variable fonts:
-wght 700.0
-
-Available axes:
-'wght' (range from 200.0 to 700.0 */
+``` */
 
 * {
   box-sizing: border-box;
@@ -24,6 +18,10 @@ Available axes:
 
 body {
   background-color: #EFEFEF !important;
+}
+
+.sec-gap{
+  padding:90px 0px;
 }
 
 
@@ -43,12 +41,8 @@ body {
 .header a {
   font-family: ClashDisplay-Medium;
   font-size: 16px;
-  font-weight: 400;
 }
 
-.hero {
-  padding: 90px 0px;
-}
 
 .hero-heading {
   padding: 40px 0px;
@@ -58,7 +52,6 @@ body {
   color: black;
   font-family: ClashDisplay-Regular;
   font-size: 182px;
-  font-weight: 400;
   line-height: 223.86px;
   text-align: left;
 }
@@ -66,12 +59,11 @@ body {
 .hero-heading p {
   font-family: ClashDisplay-Regular;
   font-size: 24px;
-  font-weight: 600;
   line-height: 29.52px;
   text-align: left;
 }
 
-.hero-heading .col-4 {
+.hero-heading .col-3 {
   align-self: flex-end;
   padding-right: 50px;
   margin-bottom: 50px;
@@ -95,9 +87,10 @@ body {
 }
 
 .hero-content h4 {
-  font-family: ClashDisplay-Regular;
+  font-family: ClashDisplay-Medium;
   font-size: 18px;
   line-height: 22.14px;
+  color:grey;
   border-bottom: 1px solid grey;
   display: inline-block;
   padding-bottom: 10px;
@@ -110,9 +103,6 @@ body {
   list-style-type: none;
 }
 
-.services {
-  padding: 90px 0px;
-}
 
 .services .row {
   margin: 0px;
@@ -121,7 +111,6 @@ body {
 .services h3 {
   font-family: ClashDisplay-Medium;
   font-size: 44px;
-  font-weight: 500;
   line-height: 54.12px;
 }
 
@@ -129,7 +118,7 @@ body {
   padding-bottom: 25px;
 }
 
-.services .col-4 {
+.services .col-lg-4 {
   padding: 0px 50px;
   border-left: 1px solid rgb(207, 207, 207);
 }
@@ -137,27 +126,23 @@ body {
 .services .col-4 h3 {
   color: grey !important;
   font-family: ClashDisplay-Regular !important;
+  margin-bottom:30px;
 }
 
 .services h4 {
   font-family: ClashDisplay-Medium;
   font-size: 24px;
-  font-weight: 500;
   line-height: 29.52px;
 }
 
 .services p {
   font-family: ClashDisplay-Regular;
   font-size: 18px;
-  font-weight: 400;
   line-height: 22.14px;
   color: black;
   margin-bottom: 10px;
 }
 
-.work {
-  padding: 90px 0px;
-}
 
 .work-head {
   padding-bottom: 20px;
@@ -166,14 +151,12 @@ body {
 .work-head h3 {
   font-family: ClashDisplay-Medium;
   font-size: 44px;
-  font-weight: 500;
   line-height: 29.52px;
 }
 
 .work-head h4 {
   font-family: ClashDisplay-Medium;
   font-size: 24px;
-  font-weight: 500;
   line-height: 29.52px;
 }
 
@@ -195,14 +178,12 @@ body {
 .work-box h2 {
   font-family: ClashDisplay-Medium;
   font-size: 90px;
-  font-weight: 500;
   line-height: 1.1;
 }
 
 .work-box p {
   font-family: ClashDisplay-Regular;
   font-size: 24px;
-  font-weight: 400;
   line-height: 29.52px;
   color: black;
 }
@@ -214,25 +195,19 @@ body {
 .work-box h4 {
   font-family: ClashDisplay-Medium;
   font-size: 34px;
-  font-weight: 500;
   line-height: 41.82px;
 }
 
-.process {
-  padding: 90px 0px;
-}
 
 .process h2 {
   font-family: ClashDisplay-Medium;
   font-size: 44px;
-  font-weight: 500;
   line-height: 54.12px;
 }
 
 .process h3 {
   font-family: ClashDisplay-Regular;
   font-size: 24px;
-  font-weight: 400;
   line-height: 29.52px;
   text-align: left;
 }
@@ -269,7 +244,6 @@ body {
 .accordians .panel p {
   font-family: ClashDisplay-Regular;
   font-size: 18px;
-  font-weight: 400;
   line-height: 22.14px;
   text-align: left;
   color: black !important;
@@ -292,13 +266,12 @@ body {
 
 
 .contact {
-  padding: 90px 0px 70px;
+  padding-bottom: 60px !important;
 }
 
 .contact h1 {
   font-family: ClashDisplay-Medium;
   font-size: 96px;
-  font-weight: 500;
   line-height: 118.08px;
   text-align: left;
 }
@@ -323,17 +296,104 @@ body {
 .footer h3{
   font-family: ClashDisplay-Regular;
   font-size: 24px;
-  font-weight: 400;
   line-height: 29.52px;
-  text-align: left;
+}
+
+.sm-break{
+  display:none;
 }
 
 .footer li{
   list-style-type: none;
-  display:inline;
+  display:inline-block;
   font-family: ClashDisplay-Medium;
   font-size: 18px;
-  font-weight: 500;
   line-height: 22.14px;
   margin-right:20px;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 1024px) {
+  .hero-heading h1 {
+    font-size: 150px;
+    line-height: 1.2;
+  }
+  .contact h1 {
+    font-size: 76px;
+    line-height: 1.2;
+    margin-bottom: 0px;
+  }
+}
+
+@media only screen and (max-width: 769px) {
+  .services .row{
+    flex-direction:column;
+  }
+  .services p{
+    font-size:20px;
+  }
+  .services .col-lg-4 {
+    margin-bottom:20px; 
+  }
+  .work-head h3{
+    margin-bottom:25px;
+  }
+  .work-head .text-right{
+    text-align: left !important;
+  }
+  .work-boxes {
+    background-position: top;
+    background-size: 75%;
+  }
+  .contact .text-right{
+    text-align:left;
+  }
+  .contact h1{
+    margin-bottom:20px;
+  }
+  .footer .col-md-12{
+    text-align: center;
+  }
+}
+
+@media only screen and (max-width: 426px) {
+  .custom-container{
+    max-width:90%;
+  }
+  .sec-gap{
+    padding:45px 0px;
+  }
+  .hero-heading h1{
+    font-size:78px;
+  }
+  .hero-content {
+    margin-top:30px;
+  }
+  .hero-content .col-md-5{
+    margin-top:10px;
+  }
+  .hero-content .btn {
+    margin-top:20px;
+  }
+  .services .col-lg-4{
+    padding:0px 30px;
+  }
+  .work-boxes{
+    background-image: none;
+  }
+  .work-box h2{
+    font-size:45px;
+  }
+  .work-box p{
+    font-size:18px;
+  }
+  .sm-break{
+    display:block;
+  }
+  .contact h1{
+    font-size: 44px;
+  }
+  .footer li{
+    margin-top:15px;
+  }
 }
