@@ -1,0 +1,16 @@
+*{
+  box-sizing: border-box;
+}
+
+body{
+  min-height:600px;
+  background-image: linear-gradient(to right, #f48a16, #f26014);
+}
+
+.todo{
+  max-width:30%;
+  margin:0 auto;
+  padding:20px;
+  background-color: white;
+  border-radius:10px;
+}
