@@ -3,14 +3,130 @@
 }
 
 body{
-  min-height:600px;
-  background-image: linear-gradient(to right, #f48a16, #f26014);
+  background-image: linear-gradient(to right, #f68e1d, #f26014);
+  font-family: sans-serif;
+}
+
+.todo-row{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 600px;
 }
 
 .todo{
-  max-width:30%;
-  margin:0 auto;
-  padding:20px;
   background-color: white;
-  border-radius:10px;
+  border-radius:8px;
+}
+
+.todo-head{
+  padding:25px;
+}
+
+.todo input{
+  font-size: 18px;
+  padding:12px;
+  /* font-weight: 500; */
+  color:grey;
+  border-left:none;
+  padding-left:0px;
+}
+
+.todo input:focus {
+  outline: none; 
+  box-shadow: none; 
+  border-color: #dee2e6;
+}
+
+.todo input::placeholder {
+  color: #888; 
+}
+
+#addon-wrapping{
+  background-color:white;
+  border-right:none;
+  color: #959595;
+  font-size:20px;
+  padding:5px 12px 5px 20px;
+}
+
+.todo-tabs{
+  display:inline-block;
+}
+.todo-nav{
+  line-height: 2;
+}
+
+.todo-nav a{
+  color:black;
+  text-decoration: none;
+  font-size: 18px;
+  margin-right:20px;
+  transition: 0.3s;
+}
+
+.todo-nav a:hover{
+  color:orange;
+}
+
+.todo-nav .active{
+  color:rgb(255, 123, 0);
+}
+
+.todo-nav .btn{
+  float:right;
+  font-size: 15px;
+  color:white !important;
+  font-weight: 500;
+  background: linear-gradient(to bottom right, #f68e1d, #f26014);
+  transition: 0.3s;
+}
+
+.todo-nav .btn:hover{
+  color:#f26014 !important;
+  background: none;
+  border:1px solid #f26014;
+}
+
+.todo-items{
+  padding:0px 25px 40px;
+}
+
+.todo-item{
+  border-bottom:2px solid #dee2e6;
+  padding:25px 0px 15px;
+}
+
+.todo-item .form-check-input{
+  padding:3px;
+  border: 2px solid #d0d0d1;
+}
+
+.todo-item p{
+  color:black;
+  font-size:18px;
+  display:inline-block;
+  margin-bottom: 0px;
+}
+
+.todo-item .dropdown{
+  float:right;
+}
+
+.todo-item .btn{
+  padding:0px;
+}
+
+.todo-item .btn::after{
+  display:none;
+}
+
+.todo-item .dropdown-toggle{
+  font-size:20px;
+  line-height: 1;
+  border: none;
+}
+
+.todo-item .dropdown-menu{
+  padding:0px;
 }
