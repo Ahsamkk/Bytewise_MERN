@@ -1,7 +1,9 @@
 const input = document.getElementById('input');
 const items = document.getElementById('todo-items');
+const sortableList = document.querySelector(".sortable-list");
+let it = sortableList.querySelectorAll(".item");
 
-let completedTodos = ["Revise Topics", "something"];
+let completedTodos = ["Revise Topics", "Do Leetcode"];
 let pendingTodos = ["Go for a movie", "Buy Groceries"];
 
 
@@ -12,7 +14,6 @@ input.addEventListener('keydown', (event) => {
       renderTodos();
    }
 })
-
 
 let renderTodos = () => {
    let activeTab = document.querySelector('.todo-tabs a.active').getAttribute('data-tab');
@@ -31,8 +32,8 @@ let renderTodos = () => {
    todosToRender.forEach((item) => {
       let isCompleted = completedTodos.includes(item);
       items.innerHTML +=
-         `<div class="todo-item">
-            <div class="form-check">
+         `<div class="todo-item item" draggable="true">
+            <div class="form-check details">
                 <input class="form-check-input" type="checkbox" ${isCompleted ? 'checked' : ''} disabled>
                 <p>${item}</p>
                 <div class="dropdown">
@@ -47,9 +48,9 @@ let renderTodos = () => {
             </div>
         </div>`;
    });
+   
+   initDragging();
 }
-
-renderTodos();
 
 let toggleButton = (event) => {
    event.preventDefault();
@@ -70,7 +71,6 @@ let clearTodo = () => {
    renderTodos();
 }
 
-
 let deleteTodo = (event) => {
    let check = event.target.parentElement.parentElement.parentElement.parentElement.firstElementChild;
    if(check.checked){
@@ -90,5 +90,33 @@ let markCompleted = (event) => {
    renderTodos();
 }
 
+let initDragging = () => {
+   it = sortableList.querySelectorAll(".item");
+   it.forEach(item => {
+      item.addEventListener("dragstart", () => {
+          setTimeout(() => item.classList.add("dragging"), 0);
+      });
+      item.addEventListener("dragend", () => item.classList.remove("dragging"));
+  });
+  
+  const initSortableList = (e) => {
+      e.preventDefault();
+      const draggingItem = document.querySelector(".dragging");
+      let siblings = [...sortableList.querySelectorAll(".item:not(.dragging)")];
+  
+      // Finding the sibling after which the dragging item should be placed
+      let nextSibling = siblings.find(sibling => {
+          return e.clientY <= sibling.offsetTop + sibling.offsetHeight / 2;
+      });
+  
+      // Inserting the dragging item before the found sibling
+      sortableList.insertBefore(draggingItem, nextSibling);
+  }
+  
+  sortableList.addEventListener("dragover", initSortableList);
+  sortableList.addEventListener("dragenter", e => e.preventDefault());
+}
 
+
+renderTodos();
 

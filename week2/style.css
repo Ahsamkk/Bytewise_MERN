@@ -94,11 +94,13 @@ body{
 .todo-item{
   border-bottom:2px solid #dee2e6;
   padding:25px 0px 15px;
+  cursor: move;
 }
 
 .todo-item .form-check-input{
   padding:3px;
   border: 2px solid #d0d0d1;
+  cursor: pointer;
 }
 
 .todo-item p{
@@ -128,4 +130,12 @@ body{
 
 .todo-item .dropdown-menu{
   padding:0px;
+}
+
+.item.dragging {
+  opacity: 0.6;
+  cursor: grab;
+}
+.item.dragging :where(.details, i) {
+  opacity: 0;
 }
