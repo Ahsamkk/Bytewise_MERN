@@ -1,0 +1,58 @@
+*{
+  box-sizing: border-box;
+}
+
+body{
+  background-color: #151515 !important;
+  color: white !important;
+}
+
+.tally{
+  text-align: center;
+}
+
+.tally h1{
+  font-family: 'Roboto Slab';
+  font-size: 4em;
+  margin:20px 0px;
+}
+
+.tally-para{
+  margin:60px 0px;
+  font-size:18px;
+  font-weight: 200;
+}
+
+textarea{
+  color:white !important;
+  background: #222222 !important; 
+  border:none !important;
+  padding: 25px !important;
+  border-radius: 15px !important;
+  font-size:20px !important;
+  font-weight: 200 !important;
+  resize: none !important;
+  box-shadow: none !important;
+}
+
+::placeholder {
+  color: rgb(93, 93, 93) !important;
+  opacity: 1;
+}
+
+.counters{
+  padding:20px 50px 5px;
+  background: #222222 ;  
+  border-radius: 15px;
+  margin:35px 0px;
+}
+
+.counters p{
+  margin:0px;
+  font-weight: 200;
+  font-size:18px;
+}
+
+.counters .row{
+  margin-bottom:10px;
+}
