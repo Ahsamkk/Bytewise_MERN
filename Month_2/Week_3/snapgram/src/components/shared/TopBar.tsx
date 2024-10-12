@@ -5,7 +5,7 @@ import { Button } from "../ui/button";
 import { useUserContext } from "@/context/AuthContext";
 import { useSignOutAccount } from "@/lib/react-query/queries";
 
-const Topbar = () => {
+const TopBar = () => {
   const navigate = useNavigate();
   const { user } = useUserContext();
   const { mutate: signOut, isSuccess } = useSignOutAccount();
@@ -46,4 +46,4 @@ const Topbar = () => {
   );
 };
 
-export default Topbar;
+export default TopBar;
