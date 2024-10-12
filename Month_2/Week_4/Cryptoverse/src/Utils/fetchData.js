@@ -1,32 +1,16 @@
-// currently used in the code
 export const coinRankingApi = {
 	method: 'GET',
 	headers: {
 		'x-rapidapi-host': 'coinranking1.p.rapidapi.com',
-		'x-rapidapi-key': 'f0021db587msh781fb1cbef39856p11c183jsn45521d5d1c85', // ashu2100ag
+		'x-rapidapi-key': process.env.REACT_APP_COIN_KEY,
 	}
 };
 
-// export const CryptoNews = {
-// 	method: 'GET',
-// 	headers: {
-// 		'x-rapidapi-host': 'cryptonews16.p.rapidapi.com',
-// 		// 'x-rapidapi-key': process.env.REACT_APP_CRYPTONEWS_API, // ashu2100ag
-// 		// 'x-rapidapi-key': process.env.REACT_APP_CRYPTONEWS_API_1, // ashu2300ag
-// 		// 'x-rapidapi-key': process.env.REACT_APP_CRYPTONEWS_API_2, // ashu2005ag
-// 		// 'x-rapidapi-key': process.env.REACT_APP_CRYPTONEWS_API_3, // adarsh001ag
-// 		// 'x-rapidapi-key': process.env.REACT_APP_CRYPTONEWS_API_4, // adarsh002ag
-
-// 	}
-// };
-
-// current used in the code
 export const CryptocurrencyNews = {
 	method: 'GET',
 	headers: {
 		'x-rapidapi-host': 'cryptocurrency-news2.p.rapidapi.com',
-		'x-rapidapi-key': '44cc7a6fc2msh993222c80d86e6ep11dea2jsn54d2c33883db', 
-		
+		'x-rapidapi-key': process.env.REACT_APP_NEWS_KEY, 
 	}
 };
 
